@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 public class ArrayFunHouse
 {
-	//Instance Variables
+	//Instance Fields
 	private int[] numArray;
 
 	//Default Constructor
@@ -31,6 +31,10 @@ public class ArrayFunHouse
 	{
 		int sum = 0;
 
+		for(int pos = start; pos<stop; pos++)
+		{
+			sum += numArray[pos];
+		}
 
 		return sum;
 	}
@@ -40,7 +44,11 @@ public class ArrayFunHouse
 	{
 		int count=0;
 
-
+		for(int x: numArray)
+		{
+			if(x == val)
+				count++;
+		}
 
 		return count;
 	}
